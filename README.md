@@ -51,8 +51,14 @@ The project exposes two main endpoints:
 
 ### Example Request (Python API)
 
+Here's the content formatted and improved in Markdown:
+
+```markdown
+## API Endpoint
+
+### POST /predict/
+Example input:
 ```json
-POST /predict/
 [
     {
         "lbmp": 50.5,
@@ -60,6 +66,7 @@ POST /predict/
         "marginal_cost_congestion": 3.8
     }
 ]
+```
 
 ## Running the Project
 
@@ -71,20 +78,23 @@ POST /predict/
 
 ### Steps
 
-#### Train the Model:
+#### Train the Model
 ```bash
 python train_model.py
+```
 
-###Run the Python API:
+#### Run the Python API
 ```bash
-- uvicorn app:app --host 127.0.0.1 --port 8000 --reload
+uvicorn app:app --host 127.0.0.1 --port 8000 --reload
+```
 
-### Run the Rust API:
+#### Run the Rust API
 ```bash
-- cargo run
+cargo run
+```
 
-## Make Predictions:
-- Send a POST request to http://127.0.0.1:8080/predict with the input data.
+## Make Predictions
+Send a POST request to `http://127.0.0.1:8080/predict` with the input data.
 
 ## Improvements
 
@@ -93,7 +103,6 @@ There are several ways to improve this project:
 - **Data Enrichment**: Include additional features such as weather data, demand forecasts, and economic indicators to improve the model's accuracy.
 - **Modeling**: Experiment with other machine learning models like XGBoost, Gradient Boosting Machines, or even deep learning models.
 - **Deployment**: Deploy the services using Docker for easier setup and scalability. Consider deploying the services to a cloud provider like AWS or GCP.
-- **Monitoring**: Implement logging, monitoring, and alerting to track model performance and API usage.
-- **Security**: Add authentication and rate limiting to the API to protect against misuse.
+```
 
-
+This version is well-organized and easy to read. You can copy and paste it into your `README.md` file.
