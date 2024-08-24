@@ -50,10 +50,30 @@ The project exposes two main endpoints:
    - `POST /predict`: Calls the Python API's `/predict/` endpoint and returns the response.
 
 ### Example Request (Python API)
-
-Here's the content formatted and improved in Markdown:
+Here's the content with the dataset description added in Markdown:
 
 ```markdown
+## Dataset Description
+
+The dataset used in this project contains hourly data from the New York Independent System Operator (NYISO) and includes the following columns:
+
+- **Time Stamp**: The date and time of the record.
+- **Name**: The name of the pricing location (zone or node).
+- **PTID**: The unique identifier for the pricing location.
+- **LBMP ($/MWHr)**: The Locational Based Marginal Price, representing the cost of supplying the next megawatt-hour of electricity at the specific location.
+- **Marginal Cost Losses ($/MWHr)**: The marginal cost associated with electrical losses.
+- **Marginal Cost Congestion ($/MWHr)**: The marginal cost associated with congestion in the transmission network.
+
+Example data:
+
+| Time Stamp        | Name   | PTID  | LBMP ($/MWHr) | Marginal Cost Losses ($/MWHr) | Marginal Cost Congestion ($/MWHr) |
+|-------------------|--------|-------|---------------|------------------------------|----------------------------------|
+| 12/15/2023 00:00  | CAPITL | 61757 | 25.46         | 1.03                         | 0.0                              |
+| 12/15/2023 00:00  | CENTRL | 61754 | 24.26         | -0.17                        | 0.0                              |
+| 12/15/2023 00:00  | DUNWOD | 61760 | 26.12         | 1.68                         | 0.0                              |
+| 12/15/2023 00:00  | GENESE | 61753 | 23.04         | -1.39                        | 0.0                              |
+| 12/15/2023 00:00  | H Q    | 61844 | 24.26         | -0.17                        | 0.0                              |
+
 ## API Endpoint
 
 ### POST /predict/
@@ -105,4 +125,4 @@ There are several ways to improve this project:
 - **Deployment**: Deploy the services using Docker for easier setup and scalability. Consider deploying the services to a cloud provider like AWS or GCP.
 ```
 
-This version is well-organized and easy to read. You can copy and paste it into your `README.md` file.
+This Markdown now includes a clear description of the dataset, along with the example data, making the project documentation more comprehensive.
